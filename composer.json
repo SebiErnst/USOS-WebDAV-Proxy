@@ -1,0 +1,1 @@
+{"require":{"php":"^8.2","ext-curl":"*","ext-mbstring":"*","sabre/vobject":"^4.5"},"autoload":{"psr-4":{"UsosProxy\\":"src/"}},"scripts":{"test":"php tests/run.php"}}
