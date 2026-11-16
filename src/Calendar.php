@@ -20,7 +20,9 @@ final class Calendar {
     }
     public static function title(string $name, array $custom): string {
         if (isset($custom[$name])) return $custom[$name];
-        $small = ['i','a','oraz','lub','albo','czy','ani','dla','do','na','w','we','z','ze','o','od','po','pod','nad','przez','bez','u'];
+        $name = preg_split('/\s+[-–—]\s+/u', $name, 2)[0];
+        $name = preg_replace('/\s*\(en\)\s*$/iu', '', $name);
+        $small = ['i','a','oraz','lub','albo','czy','ani','dla','do','na','w','we','z','ze','o','od','po','pod','nad','przez','bez','u','in','and','of'];
         return implode('', array_map(static function ($word) use ($small) {
             $first = mb_substr($word, 0, 1);
             return in_array(mb_strtolower($word), $small, true) || preg_match('/^\p{Ll}\p{Lu}/u', $word)

@@ -3,6 +3,11 @@ require __DIR__.'/../vendor/autoload.php';
 use UsosProxy\Calendar;
 function check($condition) { if (!$condition) throw new RuntimeException('Test failed'); }
 check(Calendar::title('Tworzenie aplikacji dla systemu iOS/iPadOS',[])==='TAdSi');
+check(Calendar::title('Ethics in research and scientific work (en)',[])==='EiRaSW');
+check(Calendar::title('Workshop in writing and preparation of scientific publications - option 3',[])==='WiWaPoSP');
+check(Calendar::title('Workshop in writing and preparation of scientific publications – option 3',[])==='WiWaPoSP');
+check(Calendar::title('Systemy klient-serwer',[])==='SK');
+check(Calendar::title('Ethics in research and scientific work (en)',['Ethics in research and scientific work (en)'=>'Ethics'])==='Ethics');
 $ics = "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Test//PL\r\nBEGIN:VEVENT\r\nUID:test\r\nDTSTART:20261116T100000Z\r\nSUMMARY:CWL - Test i programowanie\r\nDESCRIPTION:Sala: 315\\nC-2\\n\\nhttps://example.org/?gr_nr=4\r\nEND:VEVENT\r\nEND:VCALENDAR\r\n";
 $result = Calendar::merge([['id'=>'123','initials'=>'AB','ics'=>$ics]],[],false);
 $cal = Sabre\VObject\Reader::read($result);
