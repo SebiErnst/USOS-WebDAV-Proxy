@@ -31,3 +31,7 @@ Cache odświeża się przy żądaniu po godzinie. Podczas awarii kopia jest dopu
 Domyślne skróty biorą pierwsze litery wyrazów, spójniki i przyimki małą literą. Mapa własnych skrótów ma pierwszeństwo. Rozpoznane rodzaje zajęć: CWL → lab, CWP → proj., W → wyk. Nieznane przedrostki pozostają bez zmian. Lokalizacja pochodzi z kolejnych linii `Sala: numer` i `budynek`, np. C-2. Pozostałe notatki zostają zachowane.
 
 Testy: `composer test`. Katalog `tests` nie musi być publikowany na serwerze.
+
+Projekt jest udostępniany na licencji [MIT](LICENSE). Zależności zachowują własne licencje.
+
+Kod i dokumentacja zostały stworzone przez agenta AI OpenAI Codex na podstawie wymagań i wskazówek autora projektu.
