@@ -21,6 +21,7 @@ Style inicjałów dla agregacji (dopisz jeden argument do URL):
 | `&initials=bold` | 𝐀𝐁 |
 | `&initials=italic` | 𝐴𝐵 |
 | `&initials=sans-bold` | 𝗔𝗕 |
+| `&initials=sans-bold-italic` | 𝘼𝘽 |
 | `&initials=monospace` | 𝙰𝙱 |
 
 Nieznany styl zwraca HTTP 400. Wygląd znaków zależy od czcionek aplikacji kalendarza.

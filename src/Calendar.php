@@ -10,6 +10,7 @@ final class Calendar {
         'bold' => 0x1D400,
         'italic' => 0x1D434,
         'sans-bold' => 0x1D5D4,
+        'sans-bold-italic' => 0x1D63C,
         'monospace' => 0x1D670,
     ];
     public static function initials(string $letters, string $style): string {

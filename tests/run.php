@@ -21,7 +21,7 @@ foreach (['CWP'=>'proj.', 'W'=>'wyk.', 'XYZ'=>'XYZ'] as $prefix=>$label) {
     $cal = Sabre\VObject\Reader::read($result);
     check((string)$cal->VEVENT->SUMMARY==='TiP '.$label.($prefix === 'W' ? '' : ' (gr. 4)'));
 }
-foreach (['plain'=>'[AB]', 'unicode'=>'🅰🅱', 'bold-script'=>'𝓐𝓑', 'bold'=>'𝐀𝐁', 'italic'=>'𝐴𝐵', 'sans-bold'=>'𝗔𝗕', 'monospace'=>'𝙰𝙱'] as $style=>$expected) {
+foreach (['plain'=>'[AB]', 'unicode'=>'🅰🅱', 'bold-script'=>'𝓐𝓑', 'bold'=>'𝐀𝐁', 'italic'=>'𝐴𝐵', 'sans-bold'=>'𝗔𝗕', 'sans-bold-italic'=>'𝘼𝘽', 'monospace'=>'𝙰𝙱'] as $style=>$expected) {
     check(Calendar::initials('AB', $style)===$expected);
     $result = Calendar::merge([['id'=>'123','initials'=>'AB','ics'=>$ics]],[],$style);
     $cal = Sabre\VObject\Reader::read($result);
