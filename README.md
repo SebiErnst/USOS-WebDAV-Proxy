@@ -28,7 +28,7 @@ Nieznany styl zwraca HTTP 400. Wygląd znaków zależy od czcionek aplikacji kal
 
 Cache odświeża się przy żądaniu po godzinie. Podczas awarii kopia jest dopuszczalna do wieku 24 godzin. Brak któregokolwiek źródła daje HTTP 502 zamiast częściowego kalendarza. Klient kalendarza sam ustala częstotliwość pobierania. Bez crona.
 
-Domyślne skróty biorą pierwsze litery wyrazów, spójniki i przyimki małą literą. Mapa własnych skrótów ma pierwszeństwo. Rozpoznane rodzaje zajęć: CWL → lab, CWP → proj., W → wyk. Nieznane przedrostki pozostają bez zmian. Lokalizacja pochodzi z kolejnych linii `Sala: numer` i `budynek`, np. C-2. Pozostałe notatki zostają zachowane.
+Domyślne skróty biorą pierwsze litery wyrazów, spójniki i przyimki małą literą. Mapa własnych skrótów ma pierwszeństwo. Rozpoznane rodzaje zajęć: CWL → lab, CWP → proj., W → wyk., ZW → warszt. (zajęcia warsztatowe). Nieznane przedrostki pozostają bez zmian. Lokalizacja pochodzi z kolejnych linii `Sala: numer` i `budynek`, np. C-2. Pozostałe notatki zostają zachowane.
 
 Testy: `composer test`. Katalog `tests` nie musi być publikowany na serwerze.
 

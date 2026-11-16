@@ -60,7 +60,7 @@ final class Calendar {
                 if (preg_match('/^([A-Z]+)\s*-\s*(.+)$/u', $summary, $m)) {
                     $isLecture = $m[1] === 'W';
                     $fullName = trim($m[2]);
-                    $types = ['CWL'=>'lab','CWP'=>'proj.','W'=>'wyk.'];
+                    $types = ['CWL'=>'lab','CWP'=>'proj.','W'=>'wyk.','ZW'=>'warszt.'];
                     $summary = self::title($m[2], $custom) . ' ' . ($types[$m[1]] ?? $m[1]);
                 } else $summary = self::title($summary, $custom);
                 $notes = trim((string)$e->DESCRIPTION);

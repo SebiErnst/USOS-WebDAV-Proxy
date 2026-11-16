@@ -21,7 +21,7 @@ $result = Calendar::merge([['id'=>'123','initials'=>'','ics'=>$minimal->serializ
 $parsed = Sabre\VObject\Reader::read($result);
 check((string)$parsed->VEVENT->DESCRIPTION==='Przedmiot: Pełna nazwa przedmiotu');
 check((string)$parsed->VEVENT->SUMMARY==='PNP');
-foreach (['CWP'=>'proj.', 'W'=>'wyk.', 'XYZ'=>'XYZ'] as $prefix=>$label) {
+foreach (['CWP'=>'proj.', 'W'=>'wyk.', 'ZW'=>'warszt.', 'XYZ'=>'XYZ'] as $prefix=>$label) {
     $result = Calendar::merge([['id'=>'123','initials'=>'','ics'=>str_replace('CWL -', $prefix.' -', $ics)]],[],false);
     $cal = Sabre\VObject\Reader::read($result);
     check((string)$cal->VEVENT->SUMMARY==='TiP '.$label.($prefix === 'W' ? '' : ' (gr. 4)'));
