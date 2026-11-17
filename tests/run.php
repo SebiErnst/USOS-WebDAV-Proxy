@@ -4,6 +4,7 @@ use UsosProxy\Calendar;
 function check($condition) { if (!$condition) throw new RuntimeException('Test failed'); }
 check(Calendar::title('Tworzenie aplikacji dla systemu iOS/iPadOS',[])==='TAdSi');
 check(Calendar::title('Ethics in research and scientific work (en)',[])==='EiRaSW');
+check(Calendar::title('Introduction to Modern Physics',[])==='ItMP');
 check(Calendar::title('Workshop in writing and preparation of scientific publications - option 3',[])==='WiWaPoSP');
 check(Calendar::title('Workshop in writing and preparation of scientific publications – option 3',[])==='WiWaPoSP');
 check(Calendar::title('Systemy klient-serwer',[])==='SK');
